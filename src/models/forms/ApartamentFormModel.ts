@@ -49,12 +49,12 @@ export class ApartamentFormModel extends AbstractFormModel {
         // TODO think how to make inputs appear conditionally
         this.camere = new Select("", this.camereItems, "Nr. Camere", EHTMLTypes.SLECT, "camere", "camere");
         this.bai = new Basic("", "Nr. Bai", EHTMLTypes.NUMBER, "Nr. Bai", "bai", "bai");
-        this.suprafataUtila = new Basic("", "Suprafata utila", EHTMLTypes.NUMBER, "mp", "suprafataUtila", "suprafataUtila");
-        this.pret = new Basic("", "Pret", EHTMLTypes.NUMBER, "euro", "pret", "pret");
+        this.suprafataUtila = new Basic("", "mp", EHTMLTypes.NUMBER, "Suprafata Utila", "suprafataUtila", "suprafataUtila");
+        this.pret = new Basic("", "Pret", EHTMLTypes.NUMBER, "Pret", "pret", "pret");
         this.compartimentare = new Select("", this.compItems, "Compartimentare", EHTMLTypes.SLECT, "compartimentare", "compartimentare");
         this.confort = new Select("", this.confortItems, "Confort", EHTMLTypes.SLECT, "confort", "confort");
         this.etaj = new Select("", this.etajItems, "Etaj", EHTMLTypes.SLECT, "etaj", "etaj");
-        this.anFinalizare = new Basic("", "An Finalizare", EHTMLTypes.NUMBER, "anFinalizare", "anFinalizare", "anFinalizare");
+        this.anFinalizare = new Basic("", "An Finalizare", EHTMLTypes.NUMBER, "An Finalizare", "anFinalizare", "anFinalizare");
         this.stadiuConstructie = new Select("", this.stadiuConstructieItems, "Stadiu Constructie", EHTMLTypes.SLECT, "stadiuConstructie", "stadiuConstructie");
         this.tipImobil = new Select("", this.tipImobilItems, "Tip Imobil", EHTMLTypes.SLECT, "tipImobil", "tipImobil");
         this.anConstructie = new Select("", this.anConstrictieItems, "An Constructie", EHTMLTypes.SLECT, "anConstructie", "anConstructie");

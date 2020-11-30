@@ -39,13 +39,13 @@ export class CasaFormModel extends AbstractFormModel {
         super();
         this.camere = new Select("", this.camereItems, "Nr. Camere", EHTMLTypes.SLECT, "camere", "camere");
         this.bai = new Basic("", "Nr. Bai", EHTMLTypes.NUMBER, "Nr. Bai", "bai", "bai");
-        this.suprafataUtila = new Basic("", "Suprafata utila", EHTMLTypes.NUMBER, "mp", "suprafataUtila", "suptrafataUtila");
+        this.suprafataUtila = new Basic("", "mp", EHTMLTypes.NUMBER, "Suprafata Utila", "suprafataUtila", "suptrafataUtila");
         this.suprafataTeren = new Basic("", "Suprafata teren", EHTMLTypes.NUMBER, "mp", "suprafataTeren", "suprafataTeren");
-        this.pret = new Basic("", "Pret", EHTMLTypes.NUMBER, "euro", "pret", "pret");
+        this.pret = new Basic("", "euro", EHTMLTypes.NUMBER, "Pret", "pret", "pret");
         this.anConstructie = new Select("", this.anConstrictieItems, "An Constructie", EHTMLTypes.SLECT, "anConstructie", "anConstructie");
-        this.anFinalizare = new Basic("", "An Finalizare", EHTMLTypes.NUMBER, "", "anFinalizare", "anFinalizare");
+        this.anFinalizare = new Basic("", "an", EHTMLTypes.NUMBER, "An Finalizare", "anFinalizare", "anFinalizare");
         this.stadiuConstructie = new Select("", this.stadiuConstructieItems, "An Constructie", EHTMLTypes.SLECT, "anConstructie", "anConstructie");
-        this.nrNiveluriPesteParter = new Basic("", "Nr Niveluri Peste Parter", EHTMLTypes.NUMBER, "", "nrNiverluirPesteParter", "nrNiverluirPesteParter");
+        this.nrNiveluriPesteParter = new Basic("", "nr.", EHTMLTypes.NUMBER, "Nr. Niveluri Peste Parter", "nrNiverluirPesteParter", "nrNiverluirPesteParter");
     }
 
     public generateFormFields(): TForm {
