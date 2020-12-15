@@ -1,5 +1,16 @@
 import React from 'react';
-import { Select, MenuItem, Grid, FormControl, InputLabel, FormHelperText, makeStyles, createStyles, Theme } from '@material-ui/core';
+import {
+    Select,
+    MenuItem,
+    Grid,
+    FormControl,
+    InputLabel,
+    FormHelperText,
+    makeStyles,
+    createStyles,
+    Theme
+} from '@material-ui/core';
+
 import { EHTMLTypes } from '../../models';
 import { IItems } from '../../models/inputs';
 
@@ -35,23 +46,23 @@ export const SelectInput = (props: selectProps) => {
     return (
         <Grid item xs={12} sm={6}>
             <FormControl variant="outlined" className={classes.formControl}>
-                <InputLabel htmlFor="outlined-age-native-simple">{name}</InputLabel>
+                <InputLabel id={`${id}-label`} >{label}</InputLabel>
                 <Select
-                    native
-                    labelId={id}
+                    labelId={`${id}-label`}
                     id={id}
                     value={value}
                     name={name}
                     //@ts-ignore
                     onChange={handleChange}
+                    label={label}
                 >
                     {items?.map((item, index) => {
-                        return (<option value={Number(item["value"])} key={index}>{item["label"]}</option>)
+                        return (<MenuItem value={Number(item["value"])} key={index}>{item["label"]}</MenuItem>)
                     })}
                 </Select>
                 <FormHelperText>{placeholder}</FormHelperText>
             </FormControl>
-            
+
         </Grid>
     )
 }
